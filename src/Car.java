@@ -43,12 +43,13 @@ public class Car {
         this.color = newColor;
     }
 
-    public ParkedCar park() {
+    public ParkedCar park(int minutes) {
         ParkedCar parkedCar = new ParkedCar(
                 this.getMake(),
                 this.getModel(),
                 this.getColor(),
-                this.getLicense().getLicenseNumber()
+                this.getLicense().getLicenseNumber(),
+                minutes
                 );
 
         return parkedCar;
